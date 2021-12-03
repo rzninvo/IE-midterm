@@ -1,8 +1,11 @@
+
+/* Making all our elements border-boxed so they have a more intuitive way of having heights and widths
+   Also making the font of all the elements sans-serif */
 *{
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
+/* Making our body a flex display just so we can put everything in the centre of our webpage */
 body {
     display: flex;
     background-image: url('background.jpg');
@@ -14,13 +17,14 @@ body {
     justify-content: center;
 }
 
-
+/* Giving margins and font size to h1 headers */
 h1{
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 30px;
 }
 
+/* Styling my buttons ( based on bootstrap ) */
 button {
     width: 100px;
     height: 30px;
@@ -36,11 +40,13 @@ button {
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
+/* Giving a style for when we hover on the buttons with our cursor */
 button:hover {
     background-color: #c2874d;
     border-color: #c2874d;
 }
 
+/* Giving a style for when we click on the buttons */
 button:focus {
     color: #000;
     background-color: #eca35c;
@@ -49,6 +55,8 @@ button:focus {
 }
 
 
+/* Giga panel is the gigachad panel that contains all of our elements in it. The reason we need such
+   a panel is because we want to make every element in it to be transparent. Also it has the fit-content width for reactive reasons*/
 .giga-panel {
     width: fit-content;
     margin: 50px auto;
@@ -61,6 +69,7 @@ button:focus {
 }
 
 
+/* Alert box is the element which contains the alerts and status messages that javascript handles */
 #alert-box {
     display: none;
     max-width: 350px;
@@ -75,6 +84,8 @@ button:focus {
     padding: 5px;
 }
 
+/* Below our alert box is the main panel that has a flex display and has a row direction. we have two container class
+    elements which take place in this main panel */
 .main-panel {
     display: flex;
     flex-direction: row;
@@ -83,6 +94,8 @@ button:focus {
     gap: 50px;
 }
 
+/* We have two container class elements that also have flex display, but this time its a col direction. On the left one
+    we have the radio boxes and the text field and on the right one we have a save container and two paragraphs */
 .container {
     margin: 0;
     display: flex;
@@ -92,15 +105,19 @@ button:focus {
     gap: 10px;
 }
 
+/* Save container is the element which shows us the saved gender for a given name(if it exists!). the save container is 
+    not displayed by default but we handle its visibility in our script */
 #save-container {
     display: none;
     border: 2px dotted #0804f39a;
 }
 
+/* Tweaking the button positions(Relative positioning) */
 .buttons{
     margin-left: 20%;
 }
 
+/* Tweaking the button positions(Relative positioning) */
 #clear-button{
     margin-left: 20%;
 }
