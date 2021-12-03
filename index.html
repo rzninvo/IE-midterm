@@ -4,19 +4,19 @@
     <meta name="author" content="Roham Zendehdel Nobari"/>
     <meta charset="utf-8" />
     <meta name="description" content="This is a tool that predicts what your gender is! It can also save your gender(probably)."/>
-    <title> Gender prediction tool </title>
+    <title> GPT </title>
 
     <link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 
 <body>
 
-    <section>
-        <h1>Gender Prediction Service</h1>
+    <div class="giga-panel">
         <div id="alert-box"></div>
         <div class="main-panel">
             <div>
                 <form class="container">
+                    <h1>Gender Prediction Service</h1>
                     <div>
                         <label for="name-field"> Name: </label>
                         <input id="name-field" type="text" name="name" />
@@ -46,12 +46,12 @@
 
             <div class="container">
                 <div>
-                    <h2> Prediction </h2>
+                    <h1> Prediction </h1>
                     <p>Gender: <span class="prediction" id="gender-result"></span></p>
                     <p>Probability: <span class="prediction" id="probabilty-result"></span></p>
                 </div>
                 
-                <div id="save-container">
+                <div id ="save-container">
                     <h2> Saved answer </h2>
                     <p id="saved-answer"></p>
                     <button id="clear-button" type="button"> Clear </button>
@@ -59,7 +59,7 @@
             </div>
         </div>
 
-    </section>
+    </div>
 
     <script type="text/javascript" src="script.js"></script>
 </body>
