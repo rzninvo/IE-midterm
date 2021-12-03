@@ -1,13 +1,3 @@
-function showAlert(text) {
-    box = document.getElementById("alert-box");
-    box.style.display = "block";
-    box.innerHTML = text;
-}
-
-function removeAlert() {
-    document.getElementById("alert-box").style.display = "none";
-}
-
 function validateName(name) {
     regex = /^[A-Za-z ]{1,255}$/;
     return regex.test(name);
@@ -24,6 +14,16 @@ function getGender() {
 function showSaveContainer(saved) {
     document.getElementById('saved-answer').innerHTML = saved;
     document.getElementById('save-container').style.display = 'block';
+}
+
+function showAlert(text) {
+    box = document.getElementById("alert-box");
+    box.style.display = "block";
+    box.innerHTML = text;
+}
+
+function removeAlert() {
+    document.getElementById("alert-box").style.display = "none";
 }
 
 document.getElementById('submit-button').onclick = (event) => {
@@ -50,7 +50,7 @@ document.getElementById('submit-button').onclick = (event) => {
     fetch(apiUrl + '?' + params.toString())
         .then((resp) => {
             if (!resp.ok) {
-                throw new Error('Network response was not ok');
+                throw new Error('Network response was not ok!');
             }
             return resp.json();
         })
