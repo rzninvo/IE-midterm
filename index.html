@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <meta name="author" content="Roham Zendehdel Nobari"/>
+    <meta charset="utf-8" />
+    <meta name="description" content="This is a tool that predicts what your gender is! It can also save your gender(probably)."/>
+    <title> Gender prediction tool </title>
+
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+
+<body>
+
+    <section>
+        <h1>Gender Prediction Service</h1>
+        <div id="alert-box"></div>
+        <div class="main-panel">
+            <div>
+                <form class="container">
+                    <div>
+                        <label for="name-field"> Name: </label>
+                        <input id="name-field" type="text" name="name" />
+                    </div>
+
+                    <div>
+                        <div>
+                            <input id="option-male" type="radio" name="gender" value="male" />
+                            <label for="option-male"> Male </label>
+                        </div>
+                        <div>
+                            <input id="option-female" type="radio" name="gender" value="female" />
+                            <label for="option-female"> Female </label>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <div>
+                            <button id="submit-button" type="submit">Submit</button>
+                        </div>
+                        <div>
+                            <button id="save-button" type="submit">Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="container">
+                <div>
+                    <h2> Prediction </h2>
+                    <p>Gender: <span class="prediction" id="gender-result"></span></p>
+                    <p>Probability: <span class="prediction" id="probabilty-result"></span></p>
+                </div>
+                
+                <div id="save-container">
+                    <h2> Saved answer </h2>
+                    <p id="saved-answer"></p>
+                    <button id="clear-button" type="button"> Clear </button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
